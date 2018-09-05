@@ -18,7 +18,7 @@ import axios from "axios";
 import ItemCard from '@/components/ItemCard';
 import ShopSlider from "@/components/ShopSlider";
 
-const api = "https://cdn.rawgit.com/NodeGG/node-store/element/itemcard/src/data/Stock.json";
+const api = "https://cdn.rawgit.com/NodeGG/node-store/dev/src/data/Stock.json";
 const gumScript = "https://gumroad.com/js/gumroad.js";
 
 export default {
