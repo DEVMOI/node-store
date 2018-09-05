@@ -3,15 +3,16 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import $ from "jquery";
+import popper from "popper.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-Vue.config.productionTip = false;
+Vue.use($, popper);
 
-Vue.use($);
+Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app');
+}).$mount('#app')

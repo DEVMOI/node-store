@@ -1,0 +1,17 @@
+{
+    "name":"The Node Store",
+    "author":"nodegg",
+    "description": "List of Items Offered by Node GG",
+    "url": "https://www.store.nodegg.com",
+    "version": "0.1.0",
+    "stock": [
+        {
+            "itemImage": "https://vectr.com/hermitjs/m2aqIYznsD.svg?width=640&height=640&select=m2aqIYznsDpage0",
+            "itemName": "The Moikaship",
+            "itemDesc": "Support the Development of the Community and Gain Access to Exclusive Content and Deals as we Grow! ",
+            "merchantName": "TheMoikaTimes",
+            "gumroadLink": "https://gum.co/Moikaship",
+            "buttonText": "Subscribe"
+        }
+    ]
+}
