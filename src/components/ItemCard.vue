@@ -3,9 +3,10 @@
         <div class="card">
         <img class="card-img-top" :src="itemImage" :alt="itemImage">
         <div class="card-body">
-            <h5 class="card-title">{{itemName}}</h5>
-            <p class="card-text lead">{{itemDescription}}</p>
-            <a class="gumroad-button w-100" :href="gumroadLink" target="_blank">{{gumroadLink}}</a>
+            <h4 class="card-title">{{itemName}}</h4>
+            <h6>{{merchantName}}</h6>
+            <p class="card-text">{{itemDesc}}</p>
+            <a class="gumroad-button w-100" :href="gumroadLink" target="_blank">{{buttonText}}</a>
         </div>
         </div>
     </div>
@@ -16,8 +17,10 @@ export default {
   props:{
       itemImage: String,
       itemName: String,
-      itemDescription: String,
+      merchantName: String,
+      itemDesc: String,
       gumroadLink: String,
+      buttonText: String
   }
 };
 </script>

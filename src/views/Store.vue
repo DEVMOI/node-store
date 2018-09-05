@@ -1,8 +1,13 @@
 <template>
-  <div id="store" class="store">
-    <ShopSlider></ShopSlider>
-    <div class="col-lg-4">
-      <ItemCard :gumroadLink="url"></ItemCard>
+  <div id="store" class="js-store">
+    <!-- <ShopSlider></ShopSlider> -->
+    <div class="mt-3" v-for="stock in stocks" :key="stock.id">
+      <div class="col-lg-3" >
+        <ItemCard :itemImage="stock.itemImage"
+        :itemName="stock.itemName" :itemDesc="stock.itemDesc"
+        :merchantName="stock.merchantName" :gumroadLink="stock.gumroadLink"
+        :buttonText="stock.buttonText"></ItemCard>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +18,9 @@ import axios from "axios";
 import ItemCard from '@/components/ItemCard';
 import ShopSlider from "@/components/ShopSlider";
 
+const api = "https://cdn.rawgit.com/NodeGG/node-store/element/itemcard/src/data/Stock.json";
+const gumScript = "https://gumroad.com/js/gumroad.js";
+
 export default {
   name: "store",
   components: {
@@ -21,12 +29,23 @@ export default {
   },
   data(){
     return{
-      itemImage: null,
-      itemName: null,
-      itemDesc: null,
-      merchantName: null,
-      url: null
-    }
+      stocks: []
+    };
+  },
+  mounted() {
+    setTimeout(()=>{
+      let gumRoadScript = document.createElement("script");
+      gumRoadScript.setAttribute("src", gumScript);
+      document.head.appendChild(gumRoadScript);
+    },100)
+
+    axios
+      .get(api) 
+      .then(res => {
+        res = res.data.stock;     
+        this.stocks = res;
+        console.log(this.stocks);
+      })
   }
 };
 </script>
