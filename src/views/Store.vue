@@ -33,12 +33,10 @@ export default {
     };
   },
   mounted() {
-    setTimeout(()=>{
-      let gumRoadScript = document.createElement("script");
-      gumRoadScript.setAttribute("src", gumScript);
-      document.head.appendChild(gumRoadScript);
-    },100)
-
+    let gumRoadScript = document.createElement("script");
+    gumRoadScript.setAttribute("src", gumScript);
+    document.body.appendChild(gumRoadScript);
+    
     axios
       .get(api) 
       .then(res => {
