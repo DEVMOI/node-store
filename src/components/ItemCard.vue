@@ -1,11 +1,11 @@
 <template>
     <div id="item-card">
         <div class="card">
-        <img class="card-img-top" :src="itemImage" :alt="itemImage">
+        <img class="card-img-top" :src="itemImage" :alt="itemImage" :title="itemDesc"/>
         <div class="card-body">
-            <h4 class="card-title">{{itemName}}</h4>
+            <h5 class="card-title">{{itemName}}</h5>
             <h6>{{merchantName}}</h6>
-            <p class="card-text">{{itemDesc}}</p>
+            <p class="card-text">{{itemDesc.substring(0,40)}}...</p>
             <a class="gumroad-button w-100" :href="gumroadLink" target="_blank">{{buttonText}}</a>
         </div>
         </div>
