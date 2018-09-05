@@ -1,21 +1,31 @@
 <template>
-  <div id="store" class="Store">
-    <ItemCard :url="subscription"></ItemCard>
-    <ItemCard :url="google"></ItemCard>
+  <div id="store" class="store">
+    <ShopSlider></ShopSlider>
+    <div class="col-lg-4">
+      <ItemCard :gumroadLink="url"></ItemCard>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 // @ is an alias to /src
-import ItemCard from '@/components/ItemCard.vue'
+import ItemCard from '@/components/ItemCard';
+import ShopSlider from "@/components/ShopSlider";
 
 export default {
   name: "store",
-  components: {ItemCard},
+  components: {
+    ItemCard,
+    ShopSlider
+  },
   data(){
     return{
-      subscription:"https://gum.co/Moikaship",
-      google: "https://www.google.com"
+      itemImage: null,
+      itemName: null,
+      itemDesc: null,
+      merchantName: null,
+      url: null
     }
   }
 };

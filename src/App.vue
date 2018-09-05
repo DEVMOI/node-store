@@ -1,9 +1,13 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Store</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class=" container ">
+    <nav id="nav" class="navbar navbar-dark bg-dark justify-content-center">
+      <li class="nav-item">
+        <router-link class="nav-link" to="/">Store</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/about">About</router-link>
+      </li>
+    </nav>
     <router-view/>
   </div>
 </template>
@@ -20,7 +24,7 @@
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #ecf0f3;
     &.router-link-exact-active {
       color: #42b983;
     }
