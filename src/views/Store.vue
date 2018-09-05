@@ -36,13 +36,12 @@ export default {
     let gumRoadScript = document.createElement("script");
     gumRoadScript.setAttribute("src", gumScript);
     document.body.appendChild(gumRoadScript);
-    
+
     axios
       .get(api) 
       .then(res => {
         res = res.data.stock;     
         this.stocks = res;
-        console.log(this.stocks);
       })
   }
 };
