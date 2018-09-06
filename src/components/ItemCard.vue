@@ -1,12 +1,10 @@
 <template>
-    <div id="item-card">
-        <div class="card">
-        <img class="card-img-top" :src="itemImage" :alt="itemImage" :title="itemDesc"/>
-        <div class="card-body">
-            <h5 class="card-title">{{itemName}}</h5>
-            <h6>{{merchantName}}</h6>
-            <p class="card-text">{{itemDesc.substring(0,40)}}...</p>
-            <a class="gumroad-button w-100" :href="gumroadLink" target="_blank">{{buttonText}}</a>
+    <div id="item-card" class="w-100">
+        <div class="card d-flex flex-md-row flex-xs-column w-100 my-2 bg-dark">
+        <img class="card-img-top image-h p-0 rounded border border-dark mx-auto" :src="itemImage" :alt="itemImage" :title="itemDesc"/>
+        <div class="bg-white card-body d-flex flex-column justify-content-between">
+            <p class="lead card-title">{{itemName}}</p>
+            <a class="gumroad-button w-100" :href="gumroadLink" target="_blank">{{btnText}}</a>
         </div>
         </div>
     </div>
@@ -20,7 +18,7 @@ export default {
       merchantName: String,
       itemDesc: String,
       gumroadLink: String,
-      buttonText: String
+      btnText:String
   }
 };
 </script>
@@ -30,5 +28,10 @@ export default {
   }
   #item-card .gumroad-button-logo{
     display: none !important;
+  }
+  .image-h{
+    height: 150px !important;
+    width: 150px !important;
+    max-width: 250px;
   }
 </style>

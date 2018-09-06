@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class=" container ">
-    <nav id="nav" class="navbar navbar-dark bg-dark justify-content-center">
+  <div id="app" class=" container-fluid p-0">
+    <nav id="nav" class="navbar navbar-dark bg-black justify-content-start">
       <li class="nav-item">
         <router-link class="nav-link" to="/">Store</router-link>
       </li>
@@ -22,13 +22,16 @@
 }
 #nav {
   list-style: none;
-  padding: 15px;
+  padding: 15px 0;
   a {
     font-weight: bold;
     color: #ecf0f3;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #cf6dca;
     }
   }
+}
+.bg-black{
+  background-color: #000;
 }
 </style>

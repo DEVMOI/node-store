@@ -10,16 +10,14 @@
             "itemName": "The Moikaship",
             "itemDesc": "Support the Development of the Community and Gain Access to Exclusive Content and Deals as we Grow! ",
             "merchantName": "TheMoikaTimes",
-            "gumroadLink": "https://gum.co/Moikaship",
-            "buttonText": "Subscribe"
+            "gumroadLink": "https://gum.co/Moikaship"
         },
         {
             "itemImage": "https://static-2.gumroad.com/res/gumroad/9732495220412/asset_previews/79b736ca7dbd13bced298f42f5cac94c/retina/4afbf29fcdb48c128809d5233a323d63.jpg",
             "itemName": "Socks by NodeGG [ Size: L ]",
             "itemDesc": "Socks with our Mascot ^-^ ",
             "merchantName": "TheMoikaTimes",
-            "gumroadLink": "https://gum.co/OklcS",
-            "buttonText": "Buy This!"
+            "gumroadLink": "https://gum.co/OklcS"
         }
     ]
 }
