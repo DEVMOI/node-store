@@ -2,12 +2,12 @@
   <div id="store" class="js-store">
     <!-- SLIDER -->
     <div class="mb-3 pb-1">
-      <ShopSlider></ShopSlider>
+      <!-- <ShopSlider></ShopSlider> -->
     </div>
     
     <!-- Searchbar -->
     <div class="my-2">
-      <Searchbar class=" w-50" @emitinput="filteredList" />
+      <!-- <Searchbar class=" w-50" @emitinput="filteredList" /> -->
       </div>
     <!-- STORE -->
     <div class="mt-3 d-flex flex-column container">
