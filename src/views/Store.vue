@@ -1,8 +1,8 @@
 <template>
   <div id="store" class="js-store">
     <!-- <ShopSlider></ShopSlider> -->
-    <div class="mt-3" v-for="stock in stocks" :key="stock.id">
-      <div class="col-lg-3" >
+    <div class="mt-3 row">
+      <div class="col-lg-3" v-for="stock in stocks" :key="stock.id">
         <ItemCard :itemImage="stock.itemImage"
         :itemName="stock.itemName" :itemDesc="stock.itemDesc"
         :merchantName="stock.merchantName" :gumroadLink="stock.gumroadLink"

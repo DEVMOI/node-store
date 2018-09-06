@@ -21,6 +21,7 @@
   color: #2c3e50;
 }
 #nav {
+  list-style: none;
   padding: 15px;
   a {
     font-weight: bold;
